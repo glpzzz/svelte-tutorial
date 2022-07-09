@@ -1,4 +1,9 @@
 <script>
+    // Events modifiers
+    // once - makes sure the event can only fire once (removes handler)
+    // preventDefault - prevents the default action (run e.preventDefault())
+    // self - only fires the event is the clicked element is the same as the one that the event was bound to
+
     export let message = 'Default value';
     export let isPromo = false;
     export let showModal = false;
@@ -6,7 +11,8 @@
 </script>
 
 {#if showModal}
-    <div class="backdrop" class:promo={isPromo} on:click>
+    <!-- User the self modifier to make sure the event in only emitted when the backdrop itself is clicked, not descendants -->
+    <div class="backdrop" class:promo={isPromo} on:click|self>
         <div class="modal">
             <p>{message}</p>
         </div>

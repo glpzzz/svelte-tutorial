@@ -33,7 +33,8 @@
 
 <Modal message="Hey, I'm a prop value" isPromo={true} {showModal} on:click={toggleModal}/>
 
-<button on:click={toggleModal}>toggle modal</button>
+<!-- Use the once modifier to prevent the toggle button to work several times -->
+<button on:click|once={toggleModal}>toggle modal</button>
 
 <main>
     <h1>People</h1>
