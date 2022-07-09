@@ -5,6 +5,13 @@
         {name: 'Mario', beltColor: 'orange', age: 45, id: 2},
         {name: 'Luigi', beltColor: 'brown', age: 35, id: 3},
     ];
+
+    const handleClick = (e, id) => {
+        // print the event
+        console.log(e);
+        // delete the person from people
+        people = people.filter(person => person.id !== id);
+    }
 </script>
 
 <main>
@@ -14,6 +21,9 @@
             <li>
                 <h2>{person.name}</h2>
                 <p>It's {person.age} and has a {person.beltColor} belt.</p>
+                <p>
+                    <button on:click={() => handleClick(person.id)}>Delete</button>
+                </p>
             </li>
         {:else}
             <p>There are no people to show</p>
@@ -29,6 +39,7 @@
             <th>Name</th>
             <th>Age</th>
             <th>Belt</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -38,6 +49,9 @@
                 <td>{person.name}</td>
                 <td>{person.age}</td>
                 <td>{person.beltColor}</td>
+                <td>
+                    <button on:click={(e) => handleClick(e, person.id)}>Delete</button>
+                </td>
             </tr>
         {/each}
         </tbody>
@@ -59,7 +73,7 @@
         font-weight: 100;
     }
 
-    table{
+    table {
         width: 100%;
     }
 
