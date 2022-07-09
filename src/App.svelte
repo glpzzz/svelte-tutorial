@@ -7,6 +7,12 @@
         {name: 'Luigi', beltColor: 'brown', age: 35, id: 3},
     ];
 
+    let showModal = false;
+
+    const toggleModal = () => {
+        showModal = !showModal;
+    };
+
     const handleClick = (e, id) => {
         // print the event
         console.log(e);
@@ -25,7 +31,9 @@
     <p>Lower or equals to 5.</p>
 {/if}
 
-<Modal message="Hey, I'm a prop value" isPromo={true}/>
+<Modal message="Hey, I'm a prop value" isPromo={true} {showModal} on:click={toggleModal}/>
+
+<button on:click={toggleModal}>toggle modal</button>
 
 <main>
     <h1>People</h1>
