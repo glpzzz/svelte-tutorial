@@ -1,4 +1,5 @@
 <script>
+    import Modal from './Modal.svelte';
 
     let people = [
         {name: 'Yoshi', beltColor: 'black', age: 25, id: 1},
@@ -23,6 +24,8 @@
 {:else}
     <p>Lower or equals to 5.</p>
 {/if}
+
+<Modal />
 
 <main>
     <h1>People</h1>
