@@ -31,10 +31,19 @@
     <p>Lower or equals to 5.</p>
 {/if}
 
-<Modal message="Hey, I'm a prop value" isPromo={true} {showModal} on:click={toggleModal}/>
+<Modal isPromo={true} {showModal} on:click={toggleModal}>
+    <div slot="title">
+        <h3>Add a new person</h3>
+    </div>
+    <form action="">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Belt color">
+        <input type="submit" value="Save"/>
+    </form>
+</Modal>
 
 <!-- Use the once modifier to prevent the toggle button to work several times -->
-<button on:click|once={toggleModal}>toggle modal</button>
+<button on:click={toggleModal}>toggle modal</button>
 
 <main>
     <h1>People</h1>
