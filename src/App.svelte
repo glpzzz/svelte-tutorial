@@ -1,5 +1,6 @@
 <script>
     import Modal from './Modal.svelte';
+    import AddPersonForm from './AddPersonForm.svelte';
 
     let people = [
         {name: 'Yoshi', beltColor: 'black', age: 25, id: 1},
@@ -35,17 +36,15 @@
     <div slot="title">
         <h3>Add a new person</h3>
     </div>
-    <form action="">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Belt color">
-        <input type="submit" value="Save"/>
-    </form>
+    <AddPersonForm />
 </Modal>
 
-<!-- Use the once modifier to prevent the toggle button to work several times -->
-<button on:click={toggleModal}>toggle modal</button>
 
 <main>
+
+    <!-- Use the once modifier to prevent the toggle button to work several times -->
+    <button on:click={toggleModal}>toggle modal</button>
+
     <h1>People</h1>
     <ul>
         {#each people as person (person.id)}
