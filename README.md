@@ -1,20 +1,8 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework and don't mind using pre-1.0 software — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# svelte-tutorial
 
----
+Following the **[Svelte Tutorial for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hlbrVO_2QFVqVPhlZmz7tO)** by [The Net Ninja](https://www.youtube.com/c/TheNetNinja). Every branch of this project belongs to one of the lessons on the tutorial. 
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+**Note:** To start on lesson 8 you should `git checkout` the project at lesson-7 branch (where the lesson 7 finished).
 
 ## Get started
 
