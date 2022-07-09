@@ -25,7 +25,7 @@
     <p>Lower or equals to 5.</p>
 {/if}
 
-<Modal />
+<Modal message="Hey, I'm a prop value" isPromo={true}/>
 
 <main>
     <h1>People</h1>
