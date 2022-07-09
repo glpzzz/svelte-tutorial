@@ -12,7 +12,17 @@
         // delete the person from people
         people = people.filter(person => person.id !== id);
     }
+
+    let num = 5;
 </script>
+
+{#if num > 20}
+    <p>Greater than 20.</p>
+{:else if num > 5}
+    <p>Greater than 5.</p>
+{:else}
+    <p>Lower or equals to 5.</p>
+{/if}
 
 <main>
     <h1>People</h1>
@@ -20,6 +30,9 @@
         {#each people as person (person.id)}
             <li>
                 <h2>{person.name}</h2>
+                {#if person.beltColor === 'black'}
+                    <p><strong>Master Ninja!</strong></p>
+                {/if}
                 <p>It's {person.age} and has a {person.beltColor} belt.</p>
                 <p>
                     <button on:click={() => handleClick(person.id)}>Delete</button>
