@@ -35,7 +35,7 @@
                 {/if}
                 <p>It's {person.age} and has a {person.beltColor} belt.</p>
                 <p>
-                    <button on:click={() => handleClick(person.id)}>Delete</button>
+                    <button on:click={(e) => handleClick(e, person.id)}>Delete</button>
                 </p>
             </li>
         {:else}
